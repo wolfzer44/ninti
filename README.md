@@ -2,7 +2,7 @@
 NINTI 🚀
 </h1>
 <h3 align="center">
-Create ReactJS uncontrolled form structures with nested fields.
+Tiny lib to help work with forms on React
 </h3>
 
 ## Installation
