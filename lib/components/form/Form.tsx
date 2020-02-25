@@ -1,9 +1,10 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, Ref } from 'react';
 import FormContext from '../FormContext';
 import dot from 'dot-object';
 
 interface PropsTypes {
     onSubmit: (inputs: any) => any;
+    ref?: any;
 }
 
 interface InputsTypes {
@@ -34,7 +35,7 @@ const Form : React.FC <PropsTypes> = (props) => {
     }
 
     return (
-        <form onSubmit={e => filterValues(e, inputs)}>
+        <form onSubmit={e => filterValues(e, inputs)} ref={props?.ref}>
            <FormContext.Provider value={{ registerField }}>
                {props.children}
            </FormContext.Provider>
